@@ -1,0 +1,12 @@
+import vehicle
+mycar=vehicle.TeleportCraft("March")
+mycar.light()
+mycar.pedal()
+mycar.horn()
+mycar.takeoff()
+mycar.draemon()
+mycar.teleport()
+mycar.landing()
+mycar.brake()
+mycar.parking()
+mycar.stop()
