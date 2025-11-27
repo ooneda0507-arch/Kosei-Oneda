@@ -19,10 +19,16 @@ matches = sorted(matches,key = lambda x: x.distance)
 
 match_img = cv2.drawMatches(img1,keypoints1,img2,keypoints2,matches[:50],None,flags = cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 
+plt.figure(figsize=(12,6))
+
+plt.subplot(1,2,1)
 plt.title("keypoints1")
-plt.imshow(cv2.cvtColor(img1_with_keypoints,cv2.COLOR_BGR2RGB))
+plt.imshow(cv2.cvtColor(img1_with_keypoints, cv2.COLOR_BGR2RGB))
 plt.axis("off")
 
+plt.subplot(1,2,2)
 plt.title("matching")
-plt.imshow(cv2.cvtColor(match_img,cv2.COLOR_BGR2RGB))
+plt.imshow(cv2.cvtColor(match_img, cv2.COLOR_BGR2RGB))
 plt.axis("off")
+
+plt.show()
